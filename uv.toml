@@ -1,0 +1,10 @@
+# Docs: https://docs.astral.sh/uv/reference/settings/#project-metadata
+
+cache-dir = ".cache/uv"
+python-preference = "managed"
+package = false
+
+[pip]
+output-file = "requirements.txt"
+verify-hashes = true
+strict = true

@@ -1,0 +1,31 @@
+# pyproject.toml - config file, used by packaging tools, linters, type checkers
+# Docs: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[project]
+name = "tic-tac-toe-backend"
+version = "0.0.1"
+description = "A backend for paper-and-pencil game for 2 players"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Roman Zubok", email = "renzor.wrk@gmail.com" }]
+maintainers = [{ name = "Roman Zubok", email = "renzor.wrk@gmail.com" }]
+keywords = ["Python", "Uv", "Ruff", "FastAPI", "Docker", "Docker Compose"]
+dependencies = [
+    "fastapi[standard]>=0.115.4",
+    "msgspec",
+    "sqlmodel>=0.0.22",
+]
+
+[project.urls]
+Repository = "https://github.com/RenZorRUS/tic-tac-toe-backend.git"
+
+[tool.uv]
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+    "pytest>=8.3.3",
+    "ruff>=0.7.1",
+]
+
+[tool.uv.sources]
+# TODO: Wait unitl msgspec is release the fix for: https://github.com/jcrist/msgspec/issues/698
+msgspec = { git = "https://github.com/jcrist/msgspec.git", rev = "main" }

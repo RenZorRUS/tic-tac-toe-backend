@@ -1,0 +1,57 @@
+# Python
+__pycache__
+.pytest_cache/
+
+# Docker
+.dockerignore
+
+# Git
+.git
+.gitignore
+
+# Cache
+.cache/
+
+# Coverage
+.coverage
+/coverage/
+/cover
+coverage.xml
+junit.xml
+
+# Others
+.storybook-out/
+
+# MacOS
+.DS_Store
+
+# Virtual environment
+.venv
+
+# Node
+package.json
+node_modules
+package-lock.json
+
+# IDE
+.vscode/tags
+.idea/
+
+# Others
+*.egg-info
+*.pyc
+*.log
+*.egg
+*.db
+*.pid
+MANIFEST
+test.conf
+pip-log.txt
+/.artifacts
+/build
+/env
+/tmp
+/wheelhouse
+/test_cli/
+*.iml
+*.codestyle.xml

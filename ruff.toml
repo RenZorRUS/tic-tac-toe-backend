@@ -1,0 +1,146 @@
+# Docs: https://docs.astral.sh/ruff/settings/#settings
+
+cache-dir = ".cache/ruff"
+indent-width = 4
+line-length = 90
+target-version = "py311"
+
+[format]
+docstring-code-format = true
+docstring-code-line-length = 60
+indent-style = "space"
+line-ending = "lf"
+quote-style = "single"
+
+[lint]
+# Docs: https://docs.astral.sh/ruff/rules/
+ignore = [
+  # undocumented-public-package
+  "D104",
+  # one-blank-line-before-class
+  "D203",
+  # no-blank-line-before-class
+  "D211",
+  # multi-line-summary-first-line
+  "D212",
+  # multi-line-summary-second-line
+  "D213",
+  # missing-trailing-comma
+  "COM812",
+  # single-line-implicit-string-concatenation
+  "ISC001",
+  # any-type
+  "ANN401",
+]
+select = [
+  # Pyflakes
+  "F",
+  # Pycodestyle errors
+  "E",
+  # Pycodestyle warning
+  "W",
+  # Mccabe
+  "C90",
+  # Isort
+  "I",
+  # Pep8-naming
+  "N",
+  # Pydocstyle
+  "D",
+  # Pyupgrade
+  "UP",
+  # Flake8-annotations
+  "ANN",
+  # Flake8-async
+  "ASYNC",
+  # Flake8-bandit
+  "S",
+  # Flake8-blind-except
+  "BLE",
+  # Flake8-boolean-trap
+  "FBT",
+  # Flake8-bugbear
+  "B",
+  # Flake8-builtins
+  "A",
+  # Flake8-commas
+  "COM",
+  # Flake8-comprehensions
+  "C4",
+  # flake8-debugger
+  "T10",
+  # Flake8-errmsg
+  "EM",
+  # Flake8-implicit-str-concat
+  "ISC",
+  # flake8-logging
+  "LOG",
+  # flake8-logging-format
+  "G",
+  # flake8-pie
+  "PIE",
+  # flake8-print
+  "T20",
+  # flake8-pyi
+  "PYI",
+  # flake8-pytest-style
+  "PT",
+  # flake8-raise
+  "RSE",
+  # flake8-return
+  "RET",
+  # flake8-self
+  "SLF",
+  # flake8-slots
+  "SLOT",
+  # flake8-simplify
+  "SIM",
+  # flake8-tidy-imports
+  "TID",
+  # flake8-type-checking
+  "TCH",
+  # flake8-unused-arguments
+  "ARG",
+  # flake8-use-pathlib
+  "PTH",
+  # eradicate
+  "ERA",
+  # Pylint convention
+  "PLC",
+  # Pylint errors
+  "PLE",
+  # Pylint refactor
+  "PLR",
+  # Pylint warning
+  "PLW",
+  # tryceratops
+  "TRY",
+  # flynt
+  "FLY",
+  # Perflint
+  "PERF",
+  # refurb
+  "FURB",
+  # Ruff-specific rules
+  "RUF",
+]
+
+[lint.flake8-pytest-style]
+fixture-parentheses = false
+parametrize-names-type = "tuple"
+parametrize-values-row-type = "tuple"
+parametrize-values-type = "tuple"
+
+[lint.flake8-quotes]
+docstring-quotes = "single"
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[lint.isort]
+force-wrap-aliases = true
+from-first = true
+lines-between-types = 0
+no-sections = true
